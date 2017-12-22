@@ -1,0 +1,3 @@
+# Collector specific configuration
+cbpf_base_url: "https://cbpfapi.unocha.org/vo1/odata/"
+
