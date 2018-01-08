@@ -49,9 +49,9 @@ def update_cbpf(base_url, downloader, poolfundabbrv, year, valid_names, replace_
     rows.append(['#adm1+name', '#cashflow+type', '#cashflow+value'])
     for admin1 in sorted(totals):
         budget, directcost, supportcost = totals[admin1]
-        rows.append([admin1, 'Budget', budget])
-        rows.append([admin1, 'Direct Cost', directcost])
-        rows.append([admin1, 'Support Cost', supportcost])
+        rows.append([admin1, 'Budget', round(budget)])
+        rows.append([admin1, 'Direct Cost', round(directcost)])
+        rows.append([admin1, 'Support Cost', round(supportcost)])
     file_to_upload = write_list_to_csv(rows, folder, filename, headers=['Admin Location', 'Cashflow Type', 'Cashflow Value'])
     resource = Resource.read_from_hdx(resource_id)
     resource.set_file_to_upload(file_to_upload)
