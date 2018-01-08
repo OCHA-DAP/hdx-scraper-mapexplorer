@@ -31,7 +31,8 @@ def main():
     dataset_base_url = Configuration.read()['dataset_base_url']
     lc_names_url = Configuration.read()['lc_names_url']
     lc_mappings_url = Configuration.read()['lc_mappings_url']
-    ssd_names_url = Configuration.read()['ssd_names_url']
+    ssd_adm1_names_url = Configuration.read()['ssd_adm1_names_url']
+    ssd_adm2_names_url = Configuration.read()['ssd_adm2_names_url']
     ssd_mappings_url = Configuration.read()['ssd_mappings_url']
     fts_base_url = Configuration.read()['fts_base_url']
     rowca_base_url = Configuration.read()['rowca_base_url']
@@ -41,7 +42,7 @@ def main():
     with Download(basic_auth_file=join(expanduser("~"), '.ftskey')) as downloader:
         update_lc(today, downloader, folder, dataset_base_url,  lc_names_url, lc_mappings_url,
                   fts_base_url, rowca_base_url)
-        update_ssd(today, downloader, folder, dataset_base_url, ssd_names_url, ssd_mappings_url, cbpf_base_url)
+        update_ssd(today, downloader, folder, dataset_base_url, ssd_adm1_names_url, ssd_adm2_names_url, ssd_mappings_url, cbpf_base_url)
 
 
 if __name__ == '__main__':
