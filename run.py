@@ -41,9 +41,9 @@ def main():
     with Download(basic_auth_file=join(expanduser("~"), '.ftskey')) as downloader:
         update_lc(today, downloader, folder, dataset_base_url,  lc_names_url, lc_mappings_url,
                   fts_base_url, rowca_base_url)
-#        update_ssd(today, downloader, folder, dataset_base_url, ssd_names_url, ssd_mappings_url, cbpf_base_url)
+        update_ssd(today, downloader, folder, dataset_base_url, ssd_names_url, ssd_mappings_url, cbpf_base_url)
 
 
 if __name__ == '__main__':
-    facade(main, hdx_site='test', project_config_yaml=join('config', 'project_configuration.yml'))
+    facade(main, hdx_site='prod', project_config_yaml=join('config', 'project_configuration.yml'))
 
