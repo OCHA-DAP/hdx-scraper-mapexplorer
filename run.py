@@ -4,6 +4,7 @@
 Top level script. Calls other functions that generate datasets that this script then creates in HDX.
 
 """
+import datetime
 import logging
 from os.path import join, expanduser
 from tempfile import gettempdir
@@ -36,9 +37,11 @@ def main():
     rowca_base_url = Configuration.read()['rowca_base_url']
     cbpf_base_url = Configuration.read()['cbpf_base_url']
     folder = gettempdir()
+    today = datetime.datetime.utcnow()
     with Download(basic_auth_file=join(expanduser("~"), '.ftskey')) as downloader:
-        update_lc(downloader, folder, dataset_base_url,  lc_names_url, lc_mappings_url, fts_base_url, rowca_base_url)
-#        update_ssd(downloader, folder, dataset_base_url, ssd_names_url, ssd_mappings_url, cbpf_base_url)
+        update_lc(today, downloader, folder, dataset_base_url,  lc_names_url, lc_mappings_url,
+                  fts_base_url, rowca_base_url)
+#        update_ssd(today, downloader, folder, dataset_base_url, ssd_names_url, ssd_mappings_url, cbpf_base_url)
 
 
 if __name__ == '__main__':
