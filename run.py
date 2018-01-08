@@ -5,7 +5,7 @@ Top level script. Calls other functions that generate datasets that this script 
 
 """
 import logging
-from os.path import join
+from os.path import join, expanduser
 from tempfile import gettempdir
 
 from hdx.hdx_configuration import Configuration
@@ -15,7 +15,7 @@ from hdx.utilities.downloader import Download
 # Remove 2 lines below if you don't want emails when there are errors
 from hdx.facades import logging_kwargs
 
-from mapexplorer import update_cbpf
+from mapexplorer import update_lc, update_ssd
 
 logging_kwargs['smtp_config_yaml'] = join('config', 'smtp_configuration.yml')
 
@@ -27,10 +27,18 @@ logger = logging.getLogger(__name__)
 def main():
     """Generate dataset and create it in HDX"""
 
+    dataset_base_url = Configuration.read()['dataset_base_url']
+    lc_names_url = Configuration.read()['lc_names_url']
+    lc_mappings_url = Configuration.read()['lc_mappings_url']
+    ssd_names_url = Configuration.read()['ssd_names_url']
+    ssd_mappings_url = Configuration.read()['ssd_mappings_url']
+    fts_base_url = Configuration.read()['fts_base_url']
+    rowca_base_url = Configuration.read()['rowca_base_url']
     cbpf_base_url = Configuration.read()['cbpf_base_url']
     folder = gettempdir()
-    with Download() as downloader:
-        update_cbpf(cbpf_base_url, downloader, 2017, folder)
+    with Download(basic_auth_file=join(expanduser("~"), '.ftskey')) as downloader:
+        update_lc(downloader, folder, dataset_base_url,  lc_names_url, lc_mappings_url, fts_base_url, rowca_base_url)
+#        update_ssd(downloader, folder, dataset_base_url, ssd_names_url, ssd_mappings_url, cbpf_base_url)
 
 
 if __name__ == '__main__':
