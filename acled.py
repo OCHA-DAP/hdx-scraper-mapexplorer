@@ -72,6 +72,7 @@ def update_acled(today, base_url, downloader, countries_to_keep, valid_names, re
         return df
 
     startdate = today - timedelta(days=365)
+    #  eg. https://api.acleddata.com/acled/read.csv?limit=0&iso=120:OR:iso=566:OR:iso=562:OR:iso=148&event_date=2017-01-16|2018-01-16&event_date_where=BETWEEN
     url = '%siso=%s&event_date=%s|%s&event_date_where=BETWEEN' % (base_url, get_country_url_string(countries_to_keep), startdate.strftime('%Y-%m-%d'), today.strftime('%Y-%m-%d'))
     df = pd.read_csv(url)
     df.columns = df.columns.str.upper()
