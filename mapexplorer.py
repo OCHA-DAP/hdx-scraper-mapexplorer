@@ -53,9 +53,8 @@ def update_ssd(today, downloader, folder, ssd_adm1_names_url, ssd_adm2_names_url
     logger.info('South Sudan - ACLED')
     update_ssd_acled(today, acled_base_url, downloader, country_list, valid_adm2_names, replace_values, folder)
     logger.info('South Sudan - CBPF')
-    now = datetime.datetime.now()
-    year = now.year
-    if now.month <= 3:
+    year = today.year
+    if today.month <= 3:
         year -= 1
     update_cbpf(cbpf_base_url, downloader, 'SSD19', year, valid_adm1_names, replace_values, folder,
                 'South_Sudan_Country_Based_Pool_Funds.csv', 'd6b18405-5982-4075-bb0a-a1a85f09d842')
