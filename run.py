@@ -28,23 +28,24 @@ logger = logging.getLogger(__name__)
 def main():
     """Generate dataset and create it in HDX"""
 
-    dataset_base_url = Configuration.read()['dataset_base_url']
     lc_names_url = Configuration.read()['lc_names_url']
     lc_mappings_url = Configuration.read()['lc_mappings_url']
     ssd_adm1_names_url = Configuration.read()['ssd_adm1_names_url']
     ssd_adm2_names_url = Configuration.read()['ssd_adm2_names_url']
     ssd_mappings_url = Configuration.read()['ssd_mappings_url']
+    acled_base_url = Configuration.read()['acled_base_url']
     fts_base_url = Configuration.read()['fts_base_url']
     rowca_base_url = Configuration.read()['rowca_base_url']
     cbpf_base_url = Configuration.read()['cbpf_base_url']
     folder = gettempdir()
     today = datetime.datetime.utcnow()
     with Download(basic_auth_file=join(expanduser("~"), '.ftskey')) as downloader:
-        update_lc(today, downloader, folder, dataset_base_url,  lc_names_url, lc_mappings_url,
-                  fts_base_url, rowca_base_url)
-        update_ssd(today, downloader, folder, dataset_base_url, ssd_adm1_names_url, ssd_adm2_names_url, ssd_mappings_url, cbpf_base_url)
+        update_lc(today, downloader, folder, lc_names_url, lc_mappings_url,
+                  acled_base_url, fts_base_url, rowca_base_url)
+#        update_ssd(today, downloader, folder, ssd_adm1_names_url, ssd_adm2_names_url, ssd_mappings_url, acled_base_url,
+#                   cbpf_base_url)
 
 
 if __name__ == '__main__':
-    facade(main, hdx_site='prod', project_config_yaml=join('config', 'project_configuration.yml'))
+    facade(main, hdx_site='test', project_config_yaml=join('config', 'project_configuration.yml'))
 

@@ -1,10 +1,10 @@
 # Collector specific configuration
-cbpf_base_url: "https://cbpfapi.unocha.org/vo1/odata/"
-dataset_base_url: "https://data.humdata.org/dataset/"
 lc_names_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3HnRX5Ux-ysHFKgJbQIpCYoZhlttAWj5rY-rBktFPLfJOQxxMA7fisFb2yCIVMFltiSLgusadPS1U/pub?gid=1264829973&single=true&output=csv"
 lc_mappings_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3HnRX5Ux-ysHFKgJbQIpCYoZhlttAWj5rY-rBktFPLfJOQxxMA7fisFb2yCIVMFltiSLgusadPS1U/pub?gid=0&single=true&output=csv"
 ssd_adm1_names_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3HnRX5Ux-ysHFKgJbQIpCYoZhlttAWj5rY-rBktFPLfJOQxxMA7fisFb2yCIVMFltiSLgusadPS1U/pub?gid=1230497144&single=true&output=csv"
 ssd_adm2_names_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3HnRX5Ux-ysHFKgJbQIpCYoZhlttAWj5rY-rBktFPLfJOQxxMA7fisFb2yCIVMFltiSLgusadPS1U/pub?gid=2003990789&single=true&output=csv"
 ssd_mappings_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3HnRX5Ux-ysHFKgJbQIpCYoZhlttAWj5rY-rBktFPLfJOQxxMA7fisFb2yCIVMFltiSLgusadPS1U/pub?gid=886731285&single=true&output=csv"
+acled_base_url: "https://api.acleddata.com/acled/read.csv?"
 fts_base_url: "https://api.hpc.tools/v1/public/"
 rowca_base_url: "http://ors.ocharowca.info/api/v2/KeyFigures/KeyFigures.ashx?"
+cbpf_base_url: "https://cbpfapi.unocha.org/vo1/odata/"

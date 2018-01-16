@@ -24,33 +24,34 @@ def get_valid_names(downloader, url, headers):
     return [x['Name'] for x in rows_gen if x['Name'] != 'Name']
 
 
-def update_lc(today, downloader, folder, dataset_base_url, lc_names_url, lc_mappings_url, fts_base_url, rowca_base_url):
+def update_lc(today, downloader, folder, lc_names_url, lc_mappings_url,
+              acled_base_url, fts_base_url, rowca_base_url):
     logger.info('Lake Chad Map Explorer Data')
     country_list = ['Cameroon', 'Nigeria', 'Niger', 'Chad']
     valid_names = get_valid_names(downloader, lc_names_url, headers=['ISO', 'Name'])
     replace_values = downloader.download_tabular_key_value(lc_mappings_url)
     logger.info('Lake Chad - ACLED')
-    update_lc_acled(dataset_base_url, downloader, country_list, valid_names, replace_values, folder)
-    logger.info('Lake Chad - FTS')
-    output_path = join(folder, 'Lake_Chad_Basin_Appeal_Status.csv')
-    update_fts(fts_base_url, downloader, country_list, output_path, '2890c719-4fb2-4178-acdb-e0c5c91cfbce')
-    logger.info('Lake Chad - ROWCA')
-    update_lc_rowca(rowca_base_url, downloader, folder, valid_names, replace_values)
-    logger.info('Lake Chad - Dataset Date')
-    dataset = Dataset.read_from_hdx('lake-chad-crisis-map-explorer-data')
-    dataset.set_dataset_date_from_datetime(today)
-    dataset.update_in_hdx()
+    update_lc_acled(today, acled_base_url, downloader, country_list, valid_names, replace_values, folder)
+    # logger.info('Lake Chad - FTS')
+    # output_path = join(folder, 'Lake_Chad_Basin_Appeal_Status.csv')
+    # update_fts(fts_base_url, downloader, country_list, output_path, '2890c719-4fb2-4178-acdb-e0c5c91cfbce')
+    # logger.info('Lake Chad - ROWCA')
+    # update_lc_rowca(rowca_base_url, downloader, folder, valid_names, replace_values)
+    # logger.info('Lake Chad - Dataset Date')
+    # dataset = Dataset.read_from_hdx('lake-chad-crisis-map-explorer-data')
+    # dataset.set_dataset_date_from_datetime(today)
+    # dataset.update_in_hdx()
 
 
-def update_ssd(today, downloader, folder, dataset_base_url, ssd_adm1_names_url, ssd_adm2_names_url, ssd_mappings_url,
-               cbpf_base_url):
+def update_ssd(today, downloader, folder, ssd_adm1_names_url, ssd_adm2_names_url, ssd_mappings_url,
+               acled_base_url, cbpf_base_url):
     logger.info('South Sudan Map Explorer Data')
     country_list = ['South Sudan']
     valid_adm1_names = get_valid_names(downloader, ssd_adm1_names_url, headers=['Name'])
     valid_adm2_names = get_valid_names(downloader, ssd_adm2_names_url, headers=['Name'])
     replace_values = downloader.download_tabular_key_value(ssd_mappings_url)
     logger.info('South Sudan - ACLED')
-    update_ssd_acled(dataset_base_url, downloader, country_list, valid_adm2_names, replace_values, folder)
+    update_ssd_acled(today, acled_base_url, downloader, country_list, valid_adm2_names, replace_values, folder)
     logger.info('South Sudan - CBPF')
     now = datetime.datetime.now()
     year = now.year
