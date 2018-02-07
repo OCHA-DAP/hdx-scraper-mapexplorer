@@ -54,10 +54,9 @@ def update_fts(base_url, downloader, country_list, output_path, resource_id):
         df = dfreq.merge(dffund, on='id')
         df.totalFunding += df.onBoundaryFunding
         df.rename(columns={'name_x': 'name'}, inplace=True)
+        # drop unwanted columns
+        df = drop_columns(df, columns_to_keep)
         combined = combined.append(df, ignore_index=True)
-
-    # drop unwanted columns
-    combined = drop_columns(combined, columns_to_keep)
 
     # trim date strings
     combined.startDate = combined.startDate.str[:10]
