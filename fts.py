@@ -49,9 +49,10 @@ def update_fts(base_url, downloader, country_list, output_path, resource_id):
         del dfreq_year['id']
         dfreq = dfreq_norm_loc.join(dfreq_year)
         r = downloader.download('%s%s' % (funding_url, iso3))
-        data = r.json()['data']['report3']['fundingTotals']['objects'][0]['singleFundingObjects']
+        data = r.json()['data']['report3']['fundingTotals']['objects'][0]['objectsBreakdown']
         dffund = json_normalize(data)
         df = dfreq.merge(dffund, on='id')
+        df.totalFunding += df.onBoundaryFunding
         df.rename(columns={'name_x': 'name'}, inplace=True)
         combined = combined.append(df, ignore_index=True)
 
@@ -65,6 +66,9 @@ def update_fts(base_url, downloader, country_list, output_path, resource_id):
     # add column for % funded
     combined['percentFunded'] = (pd.to_numeric(combined.totalFunding) / pd.to_numeric(
         combined.revisedRequirements)) * 100
+
+    # sort
+    combined.sort_values(['country', 'endDate'], ascending=[True, False], inplace=True)
 
     # add HXL tags
     combined = hxlate(combined, hxl_names)
