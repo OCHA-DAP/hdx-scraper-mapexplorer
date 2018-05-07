@@ -1,0 +1,8 @@
+country,id,name,code,startDate,endDate,year,revisedRequirements,totalFunding,percentFunded
+#country+name,#x_appeal+id,#x_appeal+name,#x_appeal+code,#date+start,#date+end,#date+year,#x_requirement+x_usd+x_current,#x_funding+x_usd,#x_requirement+x_met+x_percent
+Nigeria,642,Nigeria 2018,HNGA18,2018-01-01,2018-12-31,2018,1047768587,357612472,34
+Nigeria,536,Nigeria 2017,HNGA17,2017-01-01,2017-12-31,2017,1054431494,458006618,43
+Nigeria,496,Nigeria 2016,HNGA16,2016-01-01,2016-12-31,2016,484179598,247624782,51
+Nigeria,472,Nigeria 2015,HNGA15,2015-01-01,2015-12-31,2015,100263495,57989983,57
+Nigeria,447,Nigeria 2014,HNGA14,2014-01-01,2014-12-31,2014,93397393,17794549,19
+Nigeria,323,West Africa 2010,CXWAF10,2010-01-01,2010-12-31,2010,774943253,4899244,0

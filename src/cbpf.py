@@ -8,10 +8,13 @@ Update cbpf
 from hdx.data.resource import Resource
 from hdx.utilities.dictandlist import write_list_to_csv
 
-from helpers import cannonize_name
+from src.helpers import cannonize_name
 
 
-def update_cbpf(base_url, downloader, poolfundabbrv, year, valid_names, replace_values, folder, filename, resource_id):
+def update_cbpf(base_url, downloader, poolfundabbrv, today, valid_names, replace_values, resource_updates):
+    year = today.year
+    if today.month <= 3:
+        year -= 1
     response = downloader.download('%sProjectSummary?poolfundAbbrv=%s' % (base_url, poolfundabbrv))
     jsonresponse = response.json()
     projects = jsonresponse['value']
@@ -52,7 +55,4 @@ def update_cbpf(base_url, downloader, poolfundabbrv, year, valid_names, replace_
         rows.append([admin1, 'Budget', round(budget)])
         rows.append([admin1, 'Direct Cost', round(directcost)])
         rows.append([admin1, 'Support Cost', round(supportcost)])
-    file_to_upload = write_list_to_csv(rows, folder, filename, headers=['Admin Location', 'Cashflow Type', 'Cashflow Value'])
-    resource = Resource.read_from_hdx(resource_id)
-    resource.set_file_to_upload(file_to_upload)
-    resource.update_in_hdx()
+    write_list_to_csv(rows, resource_updates['cbpf']['path'], headers=['Admin Location', 'Cashflow Type', 'Cashflow Value'])

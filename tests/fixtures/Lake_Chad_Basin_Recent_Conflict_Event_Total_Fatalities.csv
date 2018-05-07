@@ -1,0 +1,160 @@
+PERIOD_ENDING,COUNTRY,ADMIN1,FATALITIES
+#date+bin,#country+name,#adm1+name,#affected+killed
+2017-08-31,Nigeria,Abia,0
+2017-09-30,Nigeria,Abia,37
+2017-10-31,Nigeria,Abia,6
+2017-08-31,Nigeria,Adamawa,20
+2017-09-30,Nigeria,Adamawa,1
+2017-10-31,Nigeria,Adamawa,8
+2017-11-30,Nigeria,Adamawa,146
+2017-12-31,Nigeria,Adamawa,38
+2018-01-31,Nigeria,Adamawa,6
+2017-08-31,Nigeria,Akwa Ibom,2
+2017-09-30,Nigeria,Akwa Ibom,0
+2017-10-31,Nigeria,Akwa Ibom,0
+2017-11-30,Nigeria,Akwa Ibom,8
+2017-12-31,Nigeria,Akwa Ibom,2
+2017-08-31,Nigeria,Anambra,50
+2017-11-30,Nigeria,Anambra,1
+2017-12-31,Nigeria,Anambra,0
+2017-08-31,Nigeria,Bauchi,0
+2017-09-30,Nigeria,Bauchi,1
+2017-08-31,Nigeria,Bayelsa,4
+2017-09-30,Nigeria,Bayelsa,4
+2017-10-31,Nigeria,Bayelsa,1
+2017-11-30,Nigeria,Bayelsa,0
+2017-12-31,Nigeria,Bayelsa,7
+2018-01-31,Nigeria,Bayelsa,2
+2017-08-31,Nigeria,Benue,5
+2017-09-30,Nigeria,Benue,4
+2017-10-31,Nigeria,Benue,1
+2017-11-30,Nigeria,Benue,1
+2017-12-31,Nigeria,Benue,9
+2018-01-31,Nigeria,Benue,95
+2017-08-31,Nigeria,Borno,248
+2017-09-30,Nigeria,Borno,251
+2017-10-31,Nigeria,Borno,613
+2017-11-30,Nigeria,Borno,133
+2017-12-31,Nigeria,Borno,202
+2018-01-31,Nigeria,Borno,195
+2017-08-31,Nigeria,Cross River,11
+2017-10-31,Nigeria,Cross River,0
+2017-11-30,Nigeria,Cross River,4
+2017-12-31,Nigeria,Cross River,8
+2018-01-31,Nigeria,Cross River,0
+2017-08-31,Nigeria,Delta,7
+2017-09-30,Nigeria,Delta,6
+2017-10-31,Nigeria,Delta,1
+2017-11-30,Nigeria,Delta,8
+2017-12-31,Nigeria,Delta,3
+2018-01-31,Nigeria,Delta,6
+2017-08-31,Nigeria,Ebonyi,0
+2017-09-30,Nigeria,Ebonyi,0
+2017-11-30,Nigeria,Ebonyi,2
+2017-12-31,Nigeria,Ebonyi,0
+2018-01-31,Nigeria,Ebonyi,0
+2017-08-31,Nigeria,Edo,3
+2017-09-30,Nigeria,Edo,7
+2017-10-31,Nigeria,Edo,0
+2017-11-30,Nigeria,Edo,1
+2017-12-31,Nigeria,Edo,1
+2018-01-31,Nigeria,Edo,1
+2017-09-30,Nigeria,Ekiti,0
+2017-10-31,Nigeria,Ekiti,2
+2017-11-30,Nigeria,Ekiti,2
+2017-12-31,Nigeria,Ekiti,0
+2018-01-31,Nigeria,Ekiti,0
+2017-08-31,Nigeria,Enugu,0
+2017-09-30,Nigeria,Enugu,0
+2017-10-31,Nigeria,Enugu,2
+2017-11-30,Nigeria,Enugu,0
+2017-12-31,Nigeria,Enugu,0
+2018-01-31,Nigeria,Enugu,0
+2017-08-31,Nigeria,Federal Capital Territory,0
+2017-09-30,Nigeria,Federal Capital Territory,0
+2017-10-31,Nigeria,Federal Capital Territory,0
+2017-11-30,Nigeria,Federal Capital Territory,0
+2017-12-31,Nigeria,Federal Capital Territory,2
+2018-01-31,Nigeria,Federal Capital Territory,0
+2017-08-31,Nigeria,Gombe,0
+2017-08-31,Nigeria,Imo,3
+2017-09-30,Nigeria,Imo,0
+2017-11-30,Nigeria,Imo,0
+2017-12-31,Nigeria,Imo,0
+2017-12-31,Nigeria,Jigawa,0
+2017-08-31,Nigeria,Kaduna,0
+2017-09-30,Nigeria,Kaduna,2
+2017-10-31,Nigeria,Kaduna,10
+2017-11-30,Nigeria,Kaduna,0
+2017-12-31,Nigeria,Kaduna,10
+2018-01-31,Nigeria,Kaduna,16
+2017-08-31,Nigeria,Kano,0
+2017-09-30,Nigeria,Kano,0
+2017-11-30,Nigeria,Kano,3
+2018-01-31,Nigeria,Kano,0
+2017-10-31,Nigeria,Katsina,3
+2017-11-30,Nigeria,Katsina,1
+2017-11-30,Nigeria,Kebbi,1
+2017-12-31,Nigeria,Kebbi,3
+2017-08-31,Nigeria,Kogi,0
+2017-09-30,Nigeria,Kogi,3
+2017-10-31,Nigeria,Kogi,4
+2017-11-30,Nigeria,Kogi,1
+2017-12-31,Nigeria,Kogi,11
+2018-01-31,Nigeria,Kogi,0
+2017-09-30,Nigeria,Kwara,0
+2017-11-30,Nigeria,Kwara,2
+2017-12-31,Nigeria,Kwara,1
+2018-01-31,Nigeria,Kwara,0
+2017-08-31,Nigeria,Lagos,5
+2017-09-30,Nigeria,Lagos,0
+2017-10-31,Nigeria,Lagos,0
+2017-11-30,Nigeria,Lagos,2
+2017-12-31,Nigeria,Lagos,0
+2018-01-31,Nigeria,Lagos,0
+2017-08-31,Nigeria,Nassarawa,1
+2017-11-30,Nigeria,Nassarawa,20
+2018-01-31,Nigeria,Nassarawa,8
+2017-08-31,Nigeria,Niger,0
+2017-12-31,Nigeria,Niger,3
+2017-08-31,Nigeria,Ogun,0
+2017-10-31,Nigeria,Ogun,0
+2017-12-31,Nigeria,Ogun,0
+2018-01-31,Nigeria,Ogun,0
+2017-08-31,Nigeria,Ondo,1
+2017-09-30,Nigeria,Ondo,1
+2017-10-31,Nigeria,Ondo,4
+2017-11-30,Nigeria,Ondo,0
+2017-12-31,Nigeria,Ondo,1
+2018-01-31,Nigeria,Ondo,1
+2017-08-31,Nigeria,Osun,1
+2017-09-30,Nigeria,Osun,1
+2017-11-30,Nigeria,Osun,0
+2017-12-31,Nigeria,Osun,0
+2017-09-30,Nigeria,Oyo,0
+2017-11-30,Nigeria,Oyo,1
+2017-12-31,Nigeria,Oyo,1
+2018-01-31,Nigeria,Oyo,0
+2017-09-30,Nigeria,Plateau,26
+2017-10-31,Nigeria,Plateau,75
+2017-11-30,Nigeria,Plateau,14
+2017-12-31,Nigeria,Plateau,11
+2018-01-31,Nigeria,Plateau,1
+2017-08-31,Nigeria,Rivers,0
+2017-09-30,Nigeria,Rivers,2
+2017-10-31,Nigeria,Rivers,22
+2017-11-30,Nigeria,Rivers,1
+2017-12-31,Nigeria,Rivers,0
+2018-01-31,Nigeria,Rivers,24
+2017-08-31,Nigeria,Sokoto,1
+2017-08-31,Nigeria,Taraba,9
+2017-10-31,Nigeria,Taraba,11
+2017-11-30,Nigeria,Taraba,0
+2017-12-31,Nigeria,Taraba,4
+2018-01-31,Nigeria,Taraba,68
+2017-09-30,Nigeria,Yobe,2
+2017-10-31,Nigeria,Yobe,14
+2017-11-30,Nigeria,Yobe,1
+2017-12-31,Nigeria,Yobe,25
+2018-01-31,Nigeria,Yobe,0
+2017-09-30,Nigeria,Zamfara,2

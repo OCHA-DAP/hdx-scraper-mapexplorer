@@ -1,0 +1,32 @@
+Admin Location,Cashflow Type,Cashflow Value
+#adm1+name,#cashflow+type,#cashflow+value
+Central Equatoria,Budget,6166468
+Central Equatoria,Direct Cost,5034519
+Central Equatoria,Support Cost,735443
+Eastern Equatoria,Budget,4381342
+Eastern Equatoria,Direct Cost,3673679
+Eastern Equatoria,Support Cost,422538
+Jonglei,Budget,16788574
+Jonglei,Direct Cost,14067608
+Jonglei,Support Cost,1641919
+Lakes,Budget,2190403
+Lakes,Direct Cost,1802681
+Lakes,Support Cost,244700
+Northern Bahr el Ghazal,Budget,4434072
+Northern Bahr el Ghazal,Direct Cost,3574110
+Northern Bahr el Ghazal,Support Cost,575254
+Unity,Budget,13305723
+Unity,Direct Cost,11067742
+Unity,Support Cost,1380197
+Upper Nile,Budget,7325146
+Upper Nile,Direct Cost,6019279
+Upper Nile,Support Cost,829349
+Warrap,Budget,4580445
+Warrap,Direct Cost,4046355
+Warrap,Support Cost,239208
+Western Bahr el Ghazal,Budget,2158166
+Western Bahr el Ghazal,Direct Cost,1828226
+Western Bahr el Ghazal,Support Cost,189028
+Western Equatoria,Budget,1867999
+Western Equatoria,Direct Cost,1596221
+Western Equatoria,Support Cost,159425

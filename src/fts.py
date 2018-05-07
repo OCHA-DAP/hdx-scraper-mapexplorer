@@ -5,18 +5,16 @@ Update fts
 ----------
 
 """
-from os.path import join
-
 import pandas as pd
 from hdx.data.resource import Resource
 from hdx.location.country import Country
 from pandas.io.json import json_normalize
 
-from helpers import drop_columns, hxlate
+from src.helpers import drop_columns, hxlate
 
 
-def update_fts(base_url, downloader, country_list, output_path, resource_id):
-    requirements_url = '%s/plan/country/' % base_url
+def update_fts(base_url, downloader, country_list, resource_updates):
+    requirements_url = '%splan/country/' % base_url
     funding_url = '%sfts/flow?groupby=plan&countryISO3=' % base_url
 
     columns_to_keep = ['country', 'id', 'name', 'code', 'startDate', 'endDate', 'year', 'revisedRequirements',
@@ -77,7 +75,4 @@ def update_fts(base_url, downloader, country_list, output_path, resource_id):
     combined['percentFunded'] = \
     combined['percentFunded'].loc[combined['percentFunded'].str.contains('.')].str.split('.').str[0]
 
-    combined.to_csv(output_path, encoding='utf-8', index=False, date_format='%Y-%m-%d')
-    resource = Resource.read_from_hdx(resource_id)
-    resource.set_file_to_upload(output_path)
-    resource.update_in_hdx()
+    combined.to_csv(resource_updates['fts']['path'], encoding='utf-8', index=False, date_format='%Y-%m-%d')

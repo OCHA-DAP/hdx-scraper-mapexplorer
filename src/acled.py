@@ -14,15 +14,15 @@ from os.path import join
 
 from hdx.location.country import Country
 
-from helpers import OutputError, hxlate, drop_columns
+from src.helpers import OutputError, hxlate, drop_columns
 
 
 def get_country_url_string(country_list):
     return ':OR:iso='.join([str(Country.get_m49_from_iso3(Country.get_iso3_country_code(country))) for country in country_list])
 
 
-def update_acled(today, base_url, downloader, countries_to_keep, valid_names, replace_values,
-                 column_for_cannonicalization, output_path, resource_id, admbin=0):
+def update_acled(today, base_url, countries_to_keep, valid_names, replace_values,
+                 column_for_cannonicalization, output_path, admbin=0):
     # configuration
     columns_to_keep = ['EVENT_ID_CNTY', 'EVENT_DATE', 'EVENT_TYPE', 'ACTOR1', 'ASSOC_ACTOR_1',
                        'ACTOR2', 'ASSOC_ACTOR_2', 'COUNTRY', 'ADMIN1', 'ADMIN2',
@@ -44,7 +44,7 @@ def update_acled(today, base_url, downloader, countries_to_keep, valid_names, re
         no_bad_names = bad_names.shape[0]
         # should be no rows if cannonicalization has worked well
         if no_bad_names > 0:
-            raise OutputError('Invalid location (not in names list)' % bad_names.loc[:, column_for_cannonicalization].unique())
+            raise OutputError('Invalid location (not in names list) ', bad_names.loc[:, column_for_cannonicalization].unique())
         return df
 
     def latest_dates(df):
@@ -69,6 +69,10 @@ def update_acled(today, base_url, downloader, countries_to_keep, valid_names, re
         df.index.set_names('PERIOD_ENDING', level=admbin + 1, inplace=True)
         # flatten the indices
         df.reset_index(inplace=True)
+        if admbin == 1:
+            df = df[['PERIOD_ENDING', 'COUNTRY', 'ADMIN1', 'FATALITIES']]
+        elif admbin == 2:
+            df = df[['PERIOD_ENDING', 'COUNTRY', 'ADMIN1', 'ADMIN2', 'FATALITIES']]
         return df
 
     startdate = today - timedelta(days=365)
@@ -98,37 +102,25 @@ def update_acled(today, base_url, downloader, countries_to_keep, valid_names, re
         df.drop(['LATITUDE', 'LONGITUDE'], axis=1, inplace=True)  # otherwise they will be summed by groupby
         df = binning(admbin, df)
         df.PERIOD_ENDING = df.PERIOD_ENDING.dt.strftime('%Y-%m-%d')
-        if admbin == 1:
-            columns_to_keep = [x for x in hxl_names.keys() if x != 'ADMIN2']
-        else:
-            columns_to_keep = hxl_names.keys()
-        df = drop_columns(df, columns_to_keep)
     df = hxlate(df, hxl_names)
     df.to_csv(output_path, encoding='utf-8', index=False, date_format='%Y-%m-%d', float_format='%.0f')
-    resource = Resource.read_from_hdx(resource_id)
-    resource.set_file_to_upload(output_path)
-    resource.update_in_hdx()
 
 
-def update_lc_acled(today, base_url, downloader, country_list, lc_names_url, replace_values, folder):
+def update_lc_acled(today, base_url, country_list, valid_names, replace_values, resource_updates):
     column_for_cannonicalization = 'ADMIN1'
-    output_path = join(folder, 'Lake_Chad_Basin_Recent_Conflict_Events.csv')
-    resource_id = 'fc396bf2-d204-48b2-84d2-337ada015273'
-    update_acled(today, base_url, downloader, country_list, lc_names_url, replace_values, column_for_cannonicalization,
-                 output_path, resource_id, admbin=-1)
-    output_path = join(folder, 'Lake_Chad_Basin_Recent_Conflict_Event_Total_Fatalities.csv')
-    resource_id = '3792ee5d-ca30-4e5c-96c8-618c6b625d12'
-    update_acled(today, base_url, downloader, country_list, lc_names_url, replace_values, column_for_cannonicalization,
-                 output_path, resource_id, admbin=1)
+    output_path = resource_updates['acled_events']['path']
+    update_acled(today, base_url, country_list, valid_names, replace_values, column_for_cannonicalization,
+                 output_path, admbin=-1)
+    output_path = resource_updates['acled_fatalities']['path']
+    update_acled(today, base_url, country_list, valid_names, replace_values, column_for_cannonicalization,
+                 output_path, admbin=1)
 
 
-def update_ssd_acled(today, base_url, downloader, country_list, ssd_names_url, replace_values, folder):
+def update_ssd_acled(today, base_url, country_list, valid_names, replace_values, resource_updates):
     column_for_cannonicalization = 'ADMIN2'
-    output_path = join(folder, 'South_Sudan_Recent_Conflict_Events.csv')
-    resource_id = '3480f362-67bb-44d0-b749-9e8fc0963fc0'
-    update_acled(today, base_url, downloader, country_list, ssd_names_url, replace_values, column_for_cannonicalization,
-                 output_path, resource_id, admbin=-1)
-    output_path = join(folder, 'South_Sudan_Recent_Conflict_Event_Total_Fatalities.csv')
-    resource_id = 'a67b85ee-50b4-4345-9102-d88bf9091e95'
-    update_acled(today, base_url, downloader, country_list, ssd_names_url, replace_values, column_for_cannonicalization,
-                 output_path, resource_id, admbin=2)
+    output_path = resource_updates['acled_events']['path']
+    update_acled(today, base_url, country_list, valid_names, replace_values, column_for_cannonicalization,
+                 output_path, admbin=-1)
+    output_path = resource_updates['acled_fatalities']['path']
+    update_acled(today, base_url, country_list, valid_names, replace_values, column_for_cannonicalization,
+                 output_path, admbin=2)

@@ -1,0 +1,176 @@
+PERIOD_ENDING,COUNTRY,ADMIN1,ADMIN2,FATALITIES
+#date+bin,#country+name,#adm1+name,#adm2+name,#affected+killed
+2017-08-31,South Sudan,Central Equatoria,Juba,21
+2017-09-30,South Sudan,Central Equatoria,Juba,6
+2017-10-31,South Sudan,Central Equatoria,Juba,0
+2017-11-30,South Sudan,Central Equatoria,Juba,10
+2017-12-31,South Sudan,Central Equatoria,Juba,10
+2018-01-31,South Sudan,Central Equatoria,Juba,7
+2017-08-31,South Sudan,Central Equatoria,Kajo-keji,0
+2017-10-31,South Sudan,Central Equatoria,Kajo-keji,34
+2017-11-30,South Sudan,Central Equatoria,Kajo-keji,43
+2017-12-31,South Sudan,Central Equatoria,Kajo-keji,20
+2017-11-30,South Sudan,Central Equatoria,Lainya,10
+2017-08-31,South Sudan,Central Equatoria,Morobo,30
+2017-09-30,South Sudan,Central Equatoria,Morobo,10
+2017-10-31,South Sudan,Central Equatoria,Morobo,20
+2017-12-31,South Sudan,Central Equatoria,Morobo,4
+2018-01-31,South Sudan,Central Equatoria,Morobo,14
+2017-12-31,South Sudan,Central Equatoria,Terekeka,6
+2018-01-31,South Sudan,Central Equatoria,Terekeka,6
+2017-08-31,South Sudan,Central Equatoria,Yei,12
+2017-09-30,South Sudan,Central Equatoria,Yei,0
+2017-10-31,South Sudan,Central Equatoria,Yei,3
+2017-11-30,South Sudan,Central Equatoria,Yei,0
+2017-12-31,South Sudan,Central Equatoria,Yei,4
+2018-01-31,South Sudan,Central Equatoria,Yei,0
+2017-08-31,South Sudan,Eastern Equatoria,Budi,20
+2017-09-30,South Sudan,Eastern Equatoria,Kapoeta East,0
+2017-12-31,South Sudan,Eastern Equatoria,Kapoeta East,50
+2017-08-31,South Sudan,Eastern Equatoria,Kapoeta North,0
+2017-08-31,South Sudan,Eastern Equatoria,Kapoeta South,3
+2017-09-30,South Sudan,Eastern Equatoria,Kapoeta South,0
+2017-11-30,South Sudan,Eastern Equatoria,Kapoeta South,50
+2017-12-31,South Sudan,Eastern Equatoria,Kapoeta South,1
+2017-08-31,South Sudan,Eastern Equatoria,Magwi,7
+2017-10-31,South Sudan,Eastern Equatoria,Magwi,0
+2017-11-30,South Sudan,Eastern Equatoria,Magwi,2
+2017-08-31,South Sudan,Eastern Equatoria,Torit,3
+2017-09-30,South Sudan,Eastern Equatoria,Torit,1
+2017-10-31,South Sudan,Eastern Equatoria,Torit,2
+2017-11-30,South Sudan,Eastern Equatoria,Torit,8
+2017-12-31,South Sudan,Eastern Equatoria,Torit,0
+2018-01-31,South Sudan,Eastern Equatoria,Torit,0
+2017-09-30,South Sudan,Jonglei,Akobo,0
+2017-10-31,South Sudan,Jonglei,Akobo,0
+2017-12-31,South Sudan,Jonglei,Akobo,0
+2018-01-31,South Sudan,Jonglei,Akobo,0
+2017-11-30,South Sudan,Jonglei,Ayod,15
+2017-09-30,South Sudan,Jonglei,Bor South,0
+2017-10-31,South Sudan,Jonglei,Bor South,0
+2017-11-30,South Sudan,Jonglei,Bor South,1
+2017-12-31,South Sudan,Jonglei,Bor South,39
+2018-01-31,South Sudan,Jonglei,Bor South,0
+2017-10-31,South Sudan,Jonglei,Duk,3
+2017-11-30,South Sudan,Jonglei,Duk,40
+2017-12-31,South Sudan,Jonglei,Duk,4
+2017-08-31,South Sudan,Jonglei,Nyirol,3
+2017-09-30,South Sudan,Jonglei,Nyirol,0
+2017-10-31,South Sudan,Jonglei,Nyirol,167
+2017-12-31,South Sudan,Jonglei,Nyirol,0
+2018-01-31,South Sudan,Jonglei,Nyirol,4
+2017-10-31,South Sudan,Jonglei,Pibor,0
+2017-08-31,South Sudan,Jonglei,Pochalla,2
+2017-11-30,South Sudan,Jonglei,Pochalla,8
+2017-08-31,South Sudan,Jonglei,Twic,0
+2018-01-31,South Sudan,Jonglei,Twic,2
+2017-09-30,South Sudan,Jonglei,Twic East,1
+2017-10-31,South Sudan,Jonglei,Twic East,1
+2017-11-30,South Sudan,Jonglei,Twic East,1
+2017-12-31,South Sudan,Jonglei,Uror,0
+2018-01-31,South Sudan,Jonglei,Uror,0
+2017-09-30,South Sudan,Lakes,Awerial,7
+2017-11-30,South Sudan,Lakes,Awerial,2
+2017-08-31,South Sudan,Lakes,Cueibet,41
+2017-11-30,South Sudan,Lakes,Cueibet,1
+2017-12-31,South Sudan,Lakes,Cueibet,60
+2017-08-31,South Sudan,Lakes,Rumbek Centre,4
+2017-09-30,South Sudan,Lakes,Rumbek Centre,25
+2017-10-31,South Sudan,Lakes,Rumbek Centre,2
+2017-11-30,South Sudan,Lakes,Rumbek Centre,9
+2017-12-31,South Sudan,Lakes,Rumbek Centre,34
+2018-01-31,South Sudan,Lakes,Rumbek Centre,6
+2017-08-31,South Sudan,Lakes,Rumbek East,0
+2017-10-31,South Sudan,Lakes,Rumbek East,0
+2017-11-30,South Sudan,Lakes,Rumbek East,1
+2017-12-31,South Sudan,Lakes,Rumbek East,38
+2017-09-30,South Sudan,Lakes,Yirol East,1
+2017-08-31,South Sudan,Lakes,Yirol West,0
+2017-09-30,South Sudan,Lakes,Yirol West,1
+2017-10-31,South Sudan,Northern Bahr el Ghazal,Aweil East,6
+2017-12-31,South Sudan,Northern Bahr el Ghazal,Aweil East,0
+2018-01-31,South Sudan,Northern Bahr el Ghazal,Aweil East,0
+2017-08-31,South Sudan,Northern Bahr el Ghazal,Aweil West,16
+2017-10-31,South Sudan,Northern Bahr el Ghazal,Aweil West,0
+2017-12-31,South Sudan,Northern Bahr el Ghazal,Aweil West,1
+2017-09-30,South Sudan,Unity,Abiemnhom,0
+2017-08-31,South Sudan,Unity,Guit,1
+2017-09-30,South Sudan,Unity,Guit,23
+2017-10-31,South Sudan,Unity,Guit,8
+2017-09-30,South Sudan,Unity,Koch,66
+2017-10-31,South Sudan,Unity,Koch,10
+2017-12-31,South Sudan,Unity,Koch,22
+2018-01-31,South Sudan,Unity,Koch,0
+2017-08-31,South Sudan,Unity,Leer,0
+2017-09-30,South Sudan,Unity,Leer,0
+2017-11-30,South Sudan,Unity,Leer,167
+2017-12-31,South Sudan,Unity,Leer,0
+2017-11-30,South Sudan,Unity,Mayendit,28
+2017-12-31,South Sudan,Unity,Mayendit,0
+2017-08-31,South Sudan,Unity,Mayom,3
+2017-09-30,South Sudan,Unity,Panyijiar,0
+2017-12-31,South Sudan,Unity,Panyijiar,0
+2017-11-30,South Sudan,Unity,Pariang,0
+2017-12-31,South Sudan,Unity,Pariang,2
+2017-08-31,South Sudan,Unity,Rubkona,20
+2017-09-30,South Sudan,Unity,Rubkona,102
+2017-10-31,South Sudan,Unity,Rubkona,28
+2017-11-30,South Sudan,Unity,Rubkona,20
+2017-12-31,South Sudan,Unity,Rubkona,3
+2018-01-31,South Sudan,Unity,Rubkona,4
+2017-12-31,South Sudan,Upper Nile,Baliet,1
+2017-09-30,South Sudan,Upper Nile,Fashoda,3
+2017-12-31,South Sudan,Upper Nile,Fashoda,0
+2018-01-31,South Sudan,Upper Nile,Fashoda,10
+2017-12-31,South Sudan,Upper Nile,Longochuk,0
+2017-11-30,South Sudan,Upper Nile,Luakpiny/Nasir,0
+2018-01-31,South Sudan,Upper Nile,Luakpiny/Nasir,0
+2017-08-31,South Sudan,Upper Nile,Maban,0
+2017-08-31,South Sudan,Upper Nile,Maiwut,31
+2017-10-31,South Sudan,Upper Nile,Maiwut,10
+2017-11-30,South Sudan,Upper Nile,Maiwut,14
+2017-12-31,South Sudan,Upper Nile,Maiwut,0
+2017-08-31,South Sudan,Upper Nile,Malakal,0
+2017-12-31,South Sudan,Upper Nile,Malakal,0
+2017-08-31,South Sudan,Upper Nile,Melut,6
+2017-09-30,South Sudan,Upper Nile,Renk,0
+2017-10-31,South Sudan,Upper Nile,Ulang,0
+2017-09-30,South Sudan,Warrap,Gogrial East,0
+2017-08-31,South Sudan,Warrap,Gogrial West,1
+2017-09-30,South Sudan,Warrap,Gogrial West,28
+2017-10-31,South Sudan,Warrap,Gogrial West,0
+2017-09-30,South Sudan,Warrap,Tonj North,2
+2017-10-31,South Sudan,Warrap,Tonj North,4
+2017-11-30,South Sudan,Warrap,Tonj North,0
+2017-12-31,South Sudan,Warrap,Tonj North,43
+2017-08-31,South Sudan,Warrap,Tonj South,0
+2017-11-30,South Sudan,Warrap,Tonj South,7
+2018-01-31,South Sudan,Warrap,Tonj South,1
+2018-01-31,South Sudan,Western Bahr el Ghazal,Jur River,1
+2017-08-31,South Sudan,Western Bahr el Ghazal,Raga,2
+2017-09-30,South Sudan,Western Bahr el Ghazal,Raga,1
+2017-10-31,South Sudan,Western Bahr el Ghazal,Raga,8
+2017-12-31,South Sudan,Western Bahr el Ghazal,Raga,52
+2018-01-31,South Sudan,Western Bahr el Ghazal,Raga,8
+2017-08-31,South Sudan,Western Bahr el Ghazal,Wau,11
+2017-09-30,South Sudan,Western Bahr el Ghazal,Wau,2
+2017-11-30,South Sudan,Western Bahr el Ghazal,Wau,1
+2017-12-31,South Sudan,Western Bahr el Ghazal,Wau,0
+2017-08-31,South Sudan,Western Equatoria,Maridi,6
+2017-09-30,South Sudan,Western Equatoria,Maridi,0
+2017-10-31,South Sudan,Western Equatoria,Maridi,6
+2017-08-31,South Sudan,Western Equatoria,Mundri East,5
+2017-09-30,South Sudan,Western Equatoria,Mundri East,1
+2017-10-31,South Sudan,Western Equatoria,Mundri East,0
+2017-11-30,South Sudan,Western Equatoria,Mundri East,2
+2017-12-31,South Sudan,Western Equatoria,Mundri East,0
+2017-09-30,South Sudan,Western Equatoria,Mundri West,1
+2017-11-30,South Sudan,Western Equatoria,Mundri West,17
+2017-12-31,South Sudan,Western Equatoria,Mundri West,3
+2018-01-31,South Sudan,Western Equatoria,Mundri West,0
+2017-09-30,South Sudan,Western Equatoria,Mvolo,0
+2017-11-30,South Sudan,Western Equatoria,Mvolo,10
+2018-01-31,South Sudan,Western Equatoria,Mvolo,0
+2017-08-31,South Sudan,Western Equatoria,Yambio,1
+2017-09-30,South Sudan,Western Equatoria,Yambio,5
+2017-10-31,South Sudan,Western Equatoria,Yambio,3

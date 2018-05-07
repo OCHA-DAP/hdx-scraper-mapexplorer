@@ -1,3 +1,6 @@
 # Collector specific configuration
-base_url: "http://xxx/"
-
+lc_names_url: "tests/fixtures/LakeChadNames.csv"
+lc_mappings_url: "tests/fixtures/LakeChadMappings.csv"
+ssd_adm1_names_url: "tests/fixtures/SouthSudanAdm1Names.csv"
+ssd_adm2_names_url: "tests/fixtures/SouthSudanAdm2Names.csv"
+ssd_mappings_url: "tests/fixtures/SouthSudanMappings.csv"

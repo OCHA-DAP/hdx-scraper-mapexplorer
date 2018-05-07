@@ -6,6 +6,7 @@ helper functions
 
 """
 import pandas as pd
+from hdx.data.resource import Resource
 
 
 class OutputError(Exception):
