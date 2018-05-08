@@ -44,16 +44,16 @@ def update_lc(today, downloader, folder, lc_names_url, lc_mappings_url,
                                             'path': join(folder, 'Lake_Chad_Basin_Recent_Conflict_Event_Total_Fatalities.csv')}
     resource_updates['fts'] = {'id': '2890c719-4fb2-4178-acdb-e0c5c91cfbce',
                                'path': join(folder, 'Lake_Chad_Basin_Appeal_Status.csv')}
-    resource_updates['rowca_population'] = {'id': '048df35c-e35f-4b1f-aa1a-2d1ce1292f22',
-                                            'path': join(folder, 'Lake_Chad_Basin_Estimated_Population.csv')}
-    resource_updates['rowca_displaced'] = {'id': '1bdcc8f3-223c-4f7d-9bc6-48be317d50c5',
-                                           'path': join(folder, 'Lake_Chad_Basin_Displaced.csv')}
+    # resource_updates['rowca_population'] = {'id': '048df35c-e35f-4b1f-aa1a-2d1ce1292f22',
+    #                                         'path': join(folder, 'Lake_Chad_Basin_Estimated_Population.csv')}
+    # resource_updates['rowca_displaced'] = {'id': '1bdcc8f3-223c-4f7d-9bc6-48be317d50c5',
+    #                                        'path': join(folder, 'Lake_Chad_Basin_Displaced.csv')}
     logger.info('Lake Chad - ACLED')
     update_lc_acled(today, acled_base_url, country_list, valid_names, replace_values, resource_updates)
     logger.info('Lake Chad - FTS')
     update_fts(fts_base_url, downloader, country_list, resource_updates)
-    logger.info('Lake Chad - ROWCA')
-    update_rowca(rowca_base_url, downloader, valid_names, replace_values, resource_updates)
+    # logger.info('Lake Chad - ROWCA')
+    # update_rowca(rowca_base_url, downloader, valid_names, replace_values, resource_updates)
     logger.info('Lake Chad - Dataset Date')
     update_resources(resource_updates)
     dataset = Dataset.read_from_hdx('lake-chad-crisis-map-explorer-data')
