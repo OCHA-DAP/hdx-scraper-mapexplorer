@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/OCHA-DAP/hdxscraper-mapexplorer.svg?branch=master&ts=1)](https://travis-ci.org/OCHA-DAP/hdxscraper-mapexplorer) [![Coverage Status](https://coveralls.io/repos/github/OCHA-DAP/hdxscraper-mapexplorer/badge.svg?branch=master&ts=1)](https://coveralls.io/github/OCHA-DAP/hdxscraper-mapexplorer?branch=master)
 
 ### Map Explorer Updater
-Updates the data for the Lake Chad and South Sudan map explorers 
+Updates the data for the Lake Chad and South Sudan map explorers. 
 
 ### Usage
 python run.py
