@@ -138,7 +138,6 @@ class TestScraperName:
                 return response
         return Download()
 
-
     def test_lc_acled(self, folder, today, lc_country_list, valid_lc_names, replace_lc_values):
         resource_updates = dict()
         filename = 'Lake_Chad_Basin_Recent_Conflict_Events.csv'
@@ -176,6 +175,16 @@ class TestScraperName:
         update_fts('http://lala/', downloaderfts, lc_country_list, resource_updates)
         assert filecmp.cmp(expected, actual, shallow=False) is True, 'Expected: %s and Actual: %s do not match!' % (expected, actual)
 
+    def test_cbpf(self, folder, today, downloadercbpf, valid_ssd_adm1_names, replace_ssd_values):
+        resource_updates = dict()
+        filename = 'South_Sudan_Country_Based_Pool_Funds.csv'
+        expected = join('tests', 'fixtures', filename)
+        actual = join(folder, filename)
+        resource_updates['cbpf'] = {'path': actual}
+        update_cbpf('http://mama/', downloadercbpf, 'SSD19', today, valid_ssd_adm1_names, replace_ssd_values, resource_updates)
+        assert filecmp.cmp(expected, actual, shallow=False) is True, 'Expected: %s and Actual: %s do not match!' % (expected, actual)
+
+
     # def test_rowca(self, folder, downloaderrowca, valid_lc_names, replace_lc_values):
     #     resource_updates = dict()
     #     filename = 'Lake_Chad_Basin_Estimated_Population.csv'
@@ -189,13 +198,3 @@ class TestScraperName:
     #     update_rowca('http://haha/', downloaderrowca, valid_lc_names, replace_lc_values, resource_updates)
     #     assert filecmp.cmp(expected_population, actual_population, shallow=False) is True, 'Expected: %s and Actual: %s do not match!' % (expected_population, actual_population)
     #     assert filecmp.cmp(expected_displaced, actual_displaced, shallow=False) is True, 'Expected: %s and Actual: %s do not match!' % (expected_displaced, actual_displaced)
-
-    def test_cbpf(self, folder, today, downloadercbpf, valid_ssd_adm1_names, replace_ssd_values):
-        resource_updates = dict()
-        filename = 'South_Sudan_Country_Based_Pool_Funds.csv'
-        expected = join('tests', 'fixtures', filename)
-        actual = join(folder, filename)
-        resource_updates['cbpf'] = {'path': actual}
-        update_cbpf('http://mama/', downloadercbpf, 'SSD19', today, valid_ssd_adm1_names, replace_ssd_values, resource_updates)
-        assert filecmp.cmp(expected, actual, shallow=False) is True, 'Expected: %s and Actual: %s do not match!' % (expected, actual)
-
