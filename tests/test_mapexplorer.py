@@ -18,7 +18,7 @@ from src.acled import update_lc_acled, update_ssd_acled
 from mapexplorer import get_valid_names
 from src.cbpf import update_cbpf
 from src.fts import update_fts
-from src.rowca import update_rowca
+#from src.rowca import update_rowca
 
 
 class TestScraperName:

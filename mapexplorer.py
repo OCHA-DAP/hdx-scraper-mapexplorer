@@ -14,7 +14,7 @@ from hdx.data.resource import Resource
 from src.acled import update_lc_acled, update_ssd_acled
 from src.cbpf import update_cbpf
 from src.fts import update_fts
-from src.rowca import update_rowca
+#from src.rowca import update_rowca
 
 logger = logging.getLogger(__name__)
 

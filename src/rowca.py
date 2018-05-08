@@ -4,10 +4,8 @@
 Update rowca
 ------------
 
-"""
 
 from dateutil import parser
-from hdx.data.resource import Resource
 from hdx.utilities.dictandlist import write_list_to_csv
 
 from src.helpers import cannonize_name
@@ -85,3 +83,4 @@ def update_rowca(base_url, downloader, valid_names, replace_values, resource_upd
     country_numbers = '3,4,8,9'
     update_rowca_population(base_url, downloader, country_numbers, valid_names, replace_values, resource_updates)
     update_rowca_movement(base_url, downloader, country_numbers, valid_names, replace_values, resource_updates)
+"""
