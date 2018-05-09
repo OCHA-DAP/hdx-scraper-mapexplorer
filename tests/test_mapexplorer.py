@@ -4,6 +4,7 @@
 Unit tests for scrapername.
 
 '''
+import difflib
 import filecmp
 from datetime import datetime
 from os.path import join
@@ -12,6 +13,7 @@ from tempfile import gettempdir
 import pytest
 from hdx.hdx_configuration import Configuration
 import hdx.utilities.downloader
+from hdx.utilities.compare import assert_files_same
 from hdx.utilities.loader import load_json
 
 from src.acled import update_lc_acled, update_ssd_acled
@@ -149,8 +151,8 @@ class TestScraperName:
         actual_fatalities = join(folder, filename)
         resource_updates['acled_fatalities'] = {'path': actual_fatalities}
         update_lc_acled(today, 'https://raw.githubusercontent.com/mcarans/hdxscraper-mapexplorer/master/tests/fixtures/ACLEDNigeria.csv?', lc_country_list, valid_lc_names, replace_lc_values, resource_updates)
-        assert filecmp.cmp(expected_events, actual_events, shallow=False) is True, 'Expected: %s and Actual: %s do not match!' % (expected_events, actual_events)
-        assert filecmp.cmp(expected_fatalities, actual_fatalities, shallow=False) is True, 'Expected: %s and Actual: %s do not match!' % (expected_fatalities, actual_fatalities)
+        assert_files_same(expected_events, actual_events)
+        assert_files_same(expected_fatalities, actual_fatalities)
 
     def test_ssd_acled(self, folder, today, ssd_country_list, valid_ssd_adm2_names, replace_ssd_values):
         resource_updates = dict()
@@ -163,8 +165,8 @@ class TestScraperName:
         actual_fatalities = join(folder, filename)
         resource_updates['acled_fatalities'] = {'path': actual_fatalities}
         update_ssd_acled(today, 'https://raw.githubusercontent.com/mcarans/hdxscraper-mapexplorer/master/tests/fixtures/ACLEDSouthSudan.csv?', ssd_country_list, valid_ssd_adm2_names, replace_ssd_values, resource_updates)
-        assert filecmp.cmp(expected_events, actual_events, shallow=False) is True, 'Expected: %s and Actual: %s do not match!' % (expected_events, actual_events)
-        assert filecmp.cmp(expected_fatalities, actual_fatalities, shallow=False) is True, 'Expected: %s and Actual: %s do not match!' % (expected_fatalities, actual_fatalities)
+        assert_files_same(expected_events, actual_events)
+        assert_files_same(expected_fatalities, actual_fatalities)
 
     def test_fts(self, folder, downloaderfts, lc_country_list):
         resource_updates = dict()
@@ -173,7 +175,7 @@ class TestScraperName:
         actual = join(folder, filename)
         resource_updates['fts'] = {'path': actual}
         update_fts('http://lala/', downloaderfts, lc_country_list, resource_updates)
-        assert filecmp.cmp(expected, actual, shallow=False) is True, 'Expected: %s and Actual: %s do not match!' % (expected, actual)
+        assert_files_same(expected, actual)
 
     def test_cbpf(self, folder, today, downloadercbpf, valid_ssd_adm1_names, replace_ssd_values):
         resource_updates = dict()
@@ -182,8 +184,7 @@ class TestScraperName:
         actual = join(folder, filename)
         resource_updates['cbpf'] = {'path': actual}
         update_cbpf('http://mama/', downloadercbpf, 'SSD19', today, valid_ssd_adm1_names, replace_ssd_values, resource_updates)
-        assert filecmp.cmp(expected, actual, shallow=False) is True, 'Expected: %s and Actual: %s do not match!' % (expected, actual)
-
+        assert_files_same(expected, actual)
 
     # def test_rowca(self, folder, downloaderrowca, valid_lc_names, replace_lc_values):
     #     resource_updates = dict()
