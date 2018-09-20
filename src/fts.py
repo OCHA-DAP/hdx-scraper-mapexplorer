@@ -46,6 +46,7 @@ def update_fts(base_url, downloader, country_list, resource_updates):
         dfreq_year = json_normalize(data, 'years')
         del dfreq_year['id']
         dfreq = dfreq_norm_loc.join(dfreq_year)
+        dfreq['id'] = dfreq.id.astype(str).str.replace('\\.0', '')
         r = downloader.download('%s%s' % (funding_url, iso3))
         data = r.json()['data']['report3']['fundingTotals']['objects'][0]['objectsBreakdown']
         dffund = json_normalize(data)

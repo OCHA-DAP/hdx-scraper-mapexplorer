@@ -1,4 +1,5 @@
 # Collector specific configuration
+# Google spreadsheet is here: https://docs.google.com/spreadsheets/d/1hw92dh8dhAGBoNLy08WJz29FAoh01g3MNxg_zFtpNUc/edit#gid=1264829973
 lc_names_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3HnRX5Ux-ysHFKgJbQIpCYoZhlttAWj5rY-rBktFPLfJOQxxMA7fisFb2yCIVMFltiSLgusadPS1U/pub?gid=1264829973&single=true&output=csv"
 lc_mappings_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3HnRX5Ux-ysHFKgJbQIpCYoZhlttAWj5rY-rBktFPLfJOQxxMA7fisFb2yCIVMFltiSLgusadPS1U/pub?gid=0&single=true&output=csv"
 ssd_adm1_names_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3HnRX5Ux-ysHFKgJbQIpCYoZhlttAWj5rY-rBktFPLfJOQxxMA7fisFb2yCIVMFltiSLgusadPS1U/pub?gid=1230497144&single=true&output=csv"
